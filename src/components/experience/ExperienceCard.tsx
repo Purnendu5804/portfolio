@@ -1,14 +1,18 @@
+'use client';
+
 import { type Experience } from '@/config/Experience';
 import { cn } from '@/lib/utils';
+import { ChevronDown } from 'lucide-react';
 import { Link } from 'next-view-transitions';
 import Image from 'next/image';
-import React from 'react';
+import React, { useState } from 'react';
 
 import Skill from '../common/Skill';
 import Github from '../svgs/Github';
 import LinkedIn from '../svgs/LinkedIn';
 import Website from '../svgs/Website';
 import X from '../svgs/X';
+import { Badge } from '../ui/badge';
 import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
 
 interface ExperienceCardProps {
@@ -20,10 +24,25 @@ const parseDescription = (text: string): string => {
 };
 
 export function ExperienceCard({ experience }: ExperienceCardProps) {
+  const [expanded, setExpanded] = useState(false);
+  const hasMore = experience.description.length > 1;
+
+  const visibleDescriptions = expanded
+    ? experience.description
+    : experience.description.slice(0, 1);
+
   return (
     <div className="flex flex-col gap-4">
-      {/* Company Header */}
-      <div className="flex flex-col gap-2 md:flex-row md:justify-between">
+      {/* Company Header — click to expand full role detail */}
+      <button
+        type="button"
+        onClick={() => hasMore && setExpanded((prev) => !prev)}
+        aria-expanded={expanded}
+        className={cn(
+          'flex flex-col gap-2 text-left md:flex-row md:justify-between',
+          hasMore && 'cursor-pointer',
+        )}
+      >
         {/* Left Side */}
         <div className="flex items-center gap-4">
           <Image
@@ -50,6 +69,7 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
                       href={experience.website}
                       target="_blank"
                       className="size-4 text-neutral-500"
+                      onClick={(e) => e.stopPropagation()}
                     >
                       <Website />
                     </Link>
@@ -64,6 +84,7 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
                       href={experience.x}
                       target="_blank"
                       className="size-4 text-neutral-500"
+                      onClick={(e) => e.stopPropagation()}
                     >
                       <X />
                     </Link>
@@ -78,6 +99,7 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
                       href={experience.linkedin}
                       target="_blank"
                       className="size-4 text-neutral-500"
+                      onClick={(e) => e.stopPropagation()}
                     >
                       <LinkedIn />
                     </Link>
@@ -92,6 +114,7 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
                       href={experience.github}
                       target="_blank"
                       className="size-4 text-neutral-500"
+                      onClick={(e) => e.stopPropagation()}
                     >
                       <Github />
                     </Link>
@@ -105,6 +128,17 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
                   Working
                 </div>
               )}
+              {hasMore && (
+                <span className="text-muted-foreground flex items-center gap-1 text-xs">
+                  <ChevronDown
+                    className={cn(
+                      'size-4 transition-transform duration-300',
+                      expanded && 'rotate-180',
+                    )}
+                  />
+                  {expanded ? 'Show less' : 'Show more'}
+                </span>
+              )}
             </div>
             <p>{experience.position}</p>
           </div>
@@ -117,36 +151,50 @@ export function ExperienceCard({ experience }: ExperienceCardProps) {
           </p>
           <p>{experience.location}</p>
         </div>
-      </div>
+      </button>
 
-      {/* Technologies */}
-      <div>
-        <h4 className="text-md mt-4 mb-2 font-semibold">Technologies</h4>
-        <div className="flex flex-wrap gap-2">
-          {experience.technologies.map((technology, techIndex: number) => (
-            <Skill
-              key={techIndex}
-              name={technology.name}
-              href={technology.href}
-            >
-              {technology.icon}
-            </Skill>
-          ))}
+      {/* Technologies (icon badges) — only when icons exist */}
+      {experience.technologies.length > 0 && (
+        <div>
+          <h4 className="text-md mt-4 mb-2 font-semibold">Technologies</h4>
+          <div className="flex flex-wrap gap-2">
+            {experience.technologies.map((technology, techIndex: number) => (
+              <Skill
+                key={techIndex}
+                name={technology.name}
+                href={technology.href}
+              >
+                {technology.icon}
+              </Skill>
+            ))}
+          </div>
         </div>
-      </div>
+      )}
+
+      {/* Tech stack (plain-text names from resume) */}
+      {expanded && experience.techStack && experience.techStack.length > 0 && (
+        <div>
+          <h4 className="text-md mt-2 mb-2 font-semibold">Tech used</h4>
+          <div className="flex flex-wrap gap-2">
+            {experience.techStack.map((tech) => (
+              <Badge key={tech} variant="outline">
+                {tech}
+              </Badge>
+            ))}
+          </div>
+        </div>
+      )}
 
       {/* Description */}
       <div className="text-secondary flex flex-col">
-        {experience.description.map(
-          (description: string, descIndex: number) => (
-            <p
-              key={descIndex}
-              dangerouslySetInnerHTML={{
-                __html: `• ${parseDescription(description)}`,
-              }}
-            />
-          ),
-        )}
+        {visibleDescriptions.map((description: string, descIndex: number) => (
+          <p
+            key={descIndex}
+            dangerouslySetInnerHTML={{
+              __html: `• ${parseDescription(description)}`,
+            }}
+          />
+        ))}
       </div>
     </div>
   );
