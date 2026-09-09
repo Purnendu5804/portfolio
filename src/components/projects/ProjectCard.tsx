@@ -58,7 +58,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       <CardHeader className="p-0">
         <div className="group relative aspect-video overflow-hidden">
           <Image
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover grayscale transition-[filter] duration-500 ease-in-out group-hover:grayscale-0"
             src={project.image}
             alt={project.title}
             width={1920}
