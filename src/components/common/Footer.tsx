@@ -11,6 +11,9 @@ export default function Footer() {
           {footerConfig.text} <b>{footerConfig.developer}</b> <br /> &copy;{' '}
           {new Date().getFullYear()}. {footerConfig.copyright}
         </p>
+        <p className="text-muted-foreground mt-2 text-center text-xs">
+          {footerConfig.templateCredit}
+        </p>
       </div>
     </Container>
   );

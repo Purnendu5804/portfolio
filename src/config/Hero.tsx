@@ -96,25 +96,27 @@ export const heroConfig = {
 };
 
 // Social Links Configuration
+// GitHub is Purnendu's real account. X / LinkedIn / Email are placeholders
+// until real links are provided — do not point them at the template author.
 export const socialLinks = [
   {
-    name: 'X',
-    href: 'https://x.com/ramxcodes',
+    name: 'X (Add link)',
+    href: '#',
     icon: <X />,
   },
   {
-    name: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/ramxcodes/',
+    name: 'LinkedIn (Add link)',
+    href: '#',
     icon: <LinkedIn />,
   },
   {
     name: 'Github',
-    href: 'https://github.com/ramxcodes',
+    href: 'https://github.com/Purnendu5804',
     icon: <Github />,
   },
   {
-    name: 'Email',
-    href: 'mailto:ramxcodes@gmail.com',
+    name: 'Email (Add link)',
+    href: '#',
     icon: <Mail />,
   },
 ];

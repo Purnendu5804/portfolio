@@ -12,7 +12,8 @@ export const ctaConfig = {
 
   // CTA button settings
   linkText: 'Book a Free Call',
-  calLink: 'ramxcodes/meeting',
+  // TODO: Add Purnendu's real Cal.com link once provided.
+  calLink: '#',
 
   // Pre-text message
   preText: "Hey, you scrolled this far, let's talk.",
