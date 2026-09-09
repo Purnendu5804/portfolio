@@ -1,26 +1,16 @@
-import Bun from '@/components/technologies/Bun';
-import JavaScript from '@/components/technologies/JavaScript';
-import MongoDB from '@/components/technologies/MongoDB';
-import NextJs from '@/components/technologies/NextJs';
-import NodeJs from '@/components/technologies/NodeJs';
-import PostgreSQL from '@/components/technologies/PostgreSQL';
+import AWS from '@/components/technologies/AWS';
+import ExpressJs from '@/components/technologies/ExpressJs';
 import Prisma from '@/components/technologies/Prisma';
-import ReactIcon from '@/components/technologies/ReactIcon';
 import TypeScript from '@/components/technologies/TypeScript';
 
 export const mySkills = [
-  <ReactIcon key="react" />,
-  <Bun key="bun" />,
-  <JavaScript key="javascript" />,
   <TypeScript key="typescript" />,
-  <MongoDB key="mongodb" />,
-  <NextJs key="nextjs" />,
-  <NodeJs key="nodejs" />,
-  <PostgreSQL key="postgresql" />,
+  <ExpressJs key="express" />,
   <Prisma key="prisma" />,
+  <AWS key="aws" />,
 ];
 
 export const about = {
-  name: 'Ramkrishna Swarnkar',
-  description: `I'm a Full Stack web developer and Open Source Contributor, I love building products to solve real-world problems. I'm specialized in building MVP's.`,
+  name: 'Purnendu',
+  description: `CS student learning DevOps & Cloud infrastructure, building toward AI-integrated systems.`,
 };

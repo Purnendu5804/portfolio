@@ -27,69 +27,55 @@ import Github from '@/components/svgs/Github';
 import LinkedIn from '@/components/svgs/LinkedIn';
 import Mail from '@/components/svgs/Mail';
 import X from '@/components/svgs/X';
-import Bun from '@/components/technologies/Bun';
-import JavaScript from '@/components/technologies/JavaScript';
-import MongoDB from '@/components/technologies/MongoDB';
-import NextJs from '@/components/technologies/NextJs';
-import NodeJs from '@/components/technologies/NodeJs';
-import PostgreSQL from '@/components/technologies/PostgreSQL';
+import AWS from '@/components/technologies/AWS';
+import ExpressJs from '@/components/technologies/ExpressJs';
 import Prisma from '@/components/technologies/Prisma';
-import ReactIcon from '@/components/technologies/ReactIcon';
 // Technology Components
 import TypeScript from '@/components/technologies/TypeScript';
 
 // Component mapping for skills
 export const skillComponents = {
   TypeScript: TypeScript,
-  ReactIcon: ReactIcon,
-  NextJs: NextJs,
-  Bun: Bun,
-  PostgreSQL: PostgreSQL,
-  NodeJs: NodeJs,
-  MongoDB: MongoDB,
+  ExpressJs: ExpressJs,
   Prisma: Prisma,
-  JavaScript: JavaScript,
+  AWS: AWS,
 };
 
 export const heroConfig = {
   // Personal Information
-  name: 'Ram',
-  title: 'A Full Stack web developer.',
+  name: 'Purnendu',
+  title:
+    'CS student learning DevOps & Cloud infrastructure, building toward AI-integrated systems.',
   avatar: '/assets/logo.png',
 
   // Skills Configuration
   skills: [
     {
-      name: 'Typescript',
+      name: 'TypeScript',
       href: 'https://www.typescriptlang.org/',
       component: 'TypeScript',
     },
     {
-      name: 'React',
-      href: 'https://react.dev/',
-      component: 'ReactIcon',
+      name: 'Express',
+      href: 'https://expressjs.com/',
+      component: 'ExpressJs',
     },
     {
-      name: 'Next.js',
-      href: 'https://nextjs.org/',
-      component: 'NextJs',
+      name: 'Prisma',
+      href: 'https://www.prisma.io/',
+      component: 'Prisma',
     },
     {
-      name: 'Bun',
-      href: 'https://bun.sh/',
-      component: 'Bun',
-    },
-    {
-      name: 'PostgreSQL',
-      href: 'https://www.postgresql.org/',
-      component: 'PostgreSQL',
+      name: 'AWS',
+      href: 'https://aws.amazon.com/',
+      component: 'AWS',
     },
   ],
 
   // Description Configuration
   description: {
     template:
-      'I build interactive web apps using {skills:0}, {skills:1}, {skills:2}, {skills:3} and {skills:4}. With a focus on <b>UI</b> design. Enthusiastic about <b>Three.js</b>, driven by a keen eye for design.',
+      'I work with {skills:0}, {skills:1}, {skills:2} and {skills:3}, currently focused on learning <b>DevOps</b> & <b>Cloud infrastructure</b>.',
   },
 
   // Buttons Configuration
