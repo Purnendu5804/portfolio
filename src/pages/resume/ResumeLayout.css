@@ -55,6 +55,19 @@
   border: none;
 }
 
+.resume-fallback-text {
+  padding: 24px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.resume-fallback-text a {
+  color: var(--accent-blue);
+  text-decoration: underline;
+}
+
 @media (max-width: 600px) {
   .resume-viewer-card {
     height: 500px;

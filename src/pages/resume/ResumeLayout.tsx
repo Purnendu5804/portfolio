@@ -18,8 +18,16 @@ export const ResumeLayout: React.FC = () => {
         <div className="resume-actions">
           <a
             href="/resume/resume.pdf"
-            download="Purnendu_Resume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="resume-btn"
+          >
+            <HiOutlineExternalLink /> Open in Full Tab
+          </a>
+          <a
+            href="/resume/resume.pdf"
+            download="Purnendu_Resume.pdf"
+            className="resume-btn resume-btn-outline"
           >
             <HiOutlineDownload /> Download PDF
           </a>
@@ -35,11 +43,24 @@ export const ResumeLayout: React.FC = () => {
       </div>
 
       <div className="resume-viewer-card">
-        <iframe
-          src="/resume/resume.pdf"
-          title="Purnendu Resume"
+        <object
+          data="/resume/resume.pdf"
+          type="application/pdf"
           className="resume-iframe"
-        />
+        >
+          <iframe
+            src="/resume/resume.pdf"
+            title="Purnendu Resume"
+            className="resume-iframe"
+          >
+            <p className="resume-fallback-text">
+              Your browser does not support inline PDF viewing.{' '}
+              <a href="/resume/resume.pdf" target="_blank" rel="noopener noreferrer">
+                Click here to view or download the PDF directly.
+              </a>
+            </p>
+          </iframe>
+        </object>
       </div>
     </div>
   );
