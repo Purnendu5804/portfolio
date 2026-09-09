@@ -125,37 +125,22 @@ export const pageMetadata: Record<string, PageMeta> = {
     twitterCard: 'summary',
   },
 
-  // Gears page
-  '/gears': {
-    title: 'Gears - My Setup & Tools',
+  // Learning / Infra Journey page
+  '/learning': {
+    title: 'Infra Journey - Learning Log',
     description:
-      'Discover the tools, devices, and software I use to get my work done efficiently.',
+      'A learning log of DevOps & Cloud skills — completed and in-progress, not a mastery showcase.',
     keywords: [
-      'setup',
-      'tools',
-      'devices',
-      'software',
-      'productivity',
-      'development environment',
+      'learning',
+      'devops',
+      'cloud',
+      'aws',
+      'docker',
+      'kubernetes',
+      'terraform',
+      'infra journey',
     ],
-    ogImage: '/meta/gears.png',
-    twitterCard: 'summary_large_image',
-  },
-
-  // Setup page
-  '/setup': {
-    title: 'Setup Guide - VS Code Configuration',
-    description:
-      'Complete guide to setting up VS Code with my preferred configuration, extensions, and fonts for optimal development.',
-    keywords: [
-      'vscode',
-      'setup',
-      'configuration',
-      'extensions',
-      'development environment',
-      'guide',
-    ],
-    ogImage: '/meta/setup.png',
+    ogImage: '/meta/projects.png',
     twitterCard: 'summary_large_image',
   },
 };
