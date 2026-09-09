@@ -19,11 +19,11 @@ export const siteConfig = {
   ogImage: '/meta/opengraph-image.png',
   author: {
     name: about.name,
-    // TODO: Add real X / LinkedIn / email once provided.
+    // TODO: Add real X handle once provided.
     twitter: '',
     github: 'Purnendu5804',
-    linkedin: '',
-    email: '',
+    linkedin: 'purnendutiwari',
+    email: 'purnendutiwari2004@gmail.com',
   },
   keywords: [
     'portfolio',

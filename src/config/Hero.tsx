@@ -106,8 +106,8 @@ export const socialLinks = [
     icon: <X />,
   },
   {
-    name: 'LinkedIn (Add link)',
-    href: '#',
+    name: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/purnendutiwari',
     icon: <LinkedIn />,
   },
   {
@@ -116,8 +116,8 @@ export const socialLinks = [
     icon: <Github />,
   },
   {
-    name: 'Email (Add link)',
-    href: '#',
+    name: 'Email',
+    href: 'mailto:purnendutiwari2004@gmail.com',
     icon: <Mail />,
   },
 ];
