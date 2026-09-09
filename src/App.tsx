@@ -11,8 +11,7 @@ const Home = lazy(() => import('./pages/home/Home'));
 const ProjectsLayout = lazy(() => import('./pages/ProjectsLayout'));
 const LearningLayout = lazy(() => import('./pages/learning/LearningLayout'));
 const ResumeLayout = lazy(() => import('./pages/resume/ResumeLayout'));
-const BlogLayout = lazy(() => import('./pages/blogs/BlogLayout'));
-const HowToPlanAProject = lazy(() => import('./pages/blogs/HowToPlanAProject'));
+const BooksLayout = lazy(() => import('./pages/books/BooksLayout'));
 const PageNotFound = lazy(() => import('./pages/notFound/PageNotFound'));
 
 export const App: React.FC = () => {
@@ -30,11 +29,8 @@ export const App: React.FC = () => {
                 <Route path="/learning" element={<LearningLayout />} />
                 <Route path="/uses" element={<Navigate to="/learning" replace />} />
                 <Route path="/resume" element={<ResumeLayout />} />
-                <Route path="/blogs" element={<BlogLayout />} />
-                <Route
-                  path="/blogs/how-to-plan-a-project"
-                  element={<HowToPlanAProject />}
-                />
+                <Route path="/books" element={<BooksLayout />} />
+                <Route path="/blogs" element={<Navigate to="/books" replace />} />
                 <Route path="*" element={<PageNotFound />} />
               </Routes>
             </Suspense>

@@ -34,12 +34,12 @@ export const Navbar: React.FC = () => {
             Learning
           </NavLink>
           <NavLink
-            to="/blogs"
+            to="/books"
             className={({ isActive }) =>
               `nav-link ${isActive ? 'nav-link-active' : ''}`
             }
           >
-            Blogs
+            Books
           </NavLink>
           <NavLink
             to="/resume"
