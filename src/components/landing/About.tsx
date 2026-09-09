@@ -41,8 +41,8 @@ export default function About() {
       {/* About me */}
       <div className="mt-8 flex flex-col gap-4 md:flex-row">
         <Image
-          src="/profile/purnendu-placeholder.svg"
-          alt="Purnendu — TODO: replace with actual profile photo"
+          src="/profile/my_image.png"
+          alt="Purnendu"
           width={100}
           height={100}
           className="border-secondary size-60 rounded-md border-2 bg-blue-300 dark:bg-yellow-300"

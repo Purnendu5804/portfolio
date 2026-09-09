@@ -6,9 +6,7 @@
  */
 
 export const ctaConfig = {
-  // Profile image settings
-  // TODO: Replace with Purnendu's actual profile photo once provided.
-  profileImage: '/profile/purnendu-placeholder.svg',
+  profileImage: '/profile/my_image.png',
   profileAlt: 'Purnendu',
 
   // CTA button settings

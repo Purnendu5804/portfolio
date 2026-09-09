@@ -14,7 +14,7 @@ export const siteConfig = {
   name: heroConfig.name,
   title: 'Purnendu — Portfolio',
   description:
-    'Portfolio of Purnendu, CS student learning DevOps & Cloud infrastructure. Built on a template by ramxcodes.',
+    'Portfolio of Purnendu, CS student learning DevOps & Cloud infrastructure.',
   url: process.env.NEXT_PUBLIC_URL || 'http://localhost:3000',
   ogImage: '/meta/opengraph-image.png',
   author: {
