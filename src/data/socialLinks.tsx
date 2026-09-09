@@ -18,7 +18,7 @@ export const socialLinks: SocialLink[] = [
   },
   {
     name: 'LinkedIn',
-    url: 'https://linkedin.com/in/purnendutiwari',
+    url: 'https://www.linkedin.com/in/purnendu-tiwari-506622202/',
     icon: <FaLinkedin />,
     color: '#0077b5',
   },
