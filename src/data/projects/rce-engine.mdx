@@ -10,6 +10,7 @@ technologies:
     'Redis',
     'dockerode',
     'Prisma',
+    'PostgreSQL',
   ]
 github: ''
 live: ''
@@ -20,12 +21,13 @@ status: 'in-progress'
 featured: true
 challenges:
   [
-    'Sandboxed execution',
+    'Sandboxed execution of untrusted code',
     'Queue-based job handling',
   ]
 learnings:
   [
     'Remote code execution design',
+    'Async pipelines with BullMQ and Redis',
   ]
 isPublished: true
 ---
@@ -34,13 +36,14 @@ isPublished: true
 
 ## Overview
 
-RCE Engine is a Judge0-style sandboxed remote code execution engine.
+RCE Engine is a Judge0-style sandboxed remote code execution engine that runs untrusted user code inside isolated Docker containers.
 
-Built with TypeScript, Express, BullMQ, Redis, dockerode, and Prisma.
+## What Was Built
 
-## Current Status
-
-Core execution engine is under active development.
+- Built a Remote Code Execution (RCE) engine that runs untrusted user code inside isolated Docker containers, enforcing a 128MB memory cap, a 64-process limit (fork-bomb protection), and no network access per submission.
+- Designed an asynchronous execution pipeline with BullMQ and Redis that decouples submission intake from sandboxed execution, threading a single UUID across the API, job queue, and database so any component can resolve a submission's state independently.
+- Created a 2-endpoint REST API (POST /submit, GET /submit/:id) with Express and Prisma/PostgreSQL to accept code submissions and expose execution status and results.
+- Hardened the sandbox with defensive controls — execution timeouts with forced container kill, and a fresh throwaway container plus temp directory per submission — to safely execute arbitrary, untrusted code.
 
 ## Ongoing Roadmap (Not Finished)
 
