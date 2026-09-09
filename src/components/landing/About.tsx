@@ -22,6 +22,7 @@ export default function About() {
         <div className="mt-4">
           <h3 className="text-2xl font-bold">{about.name}</h3>
           <p className="text-secondary mt-4">{about.description}</p>
+          <p className="text-secondary mt-2 text-sm">{about.personal}</p>
           <p className="text-secondary mt-8 font-bold">Skills</p>
           <div className="flex flex-wrap gap-2">
             {mySkills.map((skill) => (

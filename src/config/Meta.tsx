@@ -143,6 +143,16 @@ export const pageMetadata: Record<string, PageMeta> = {
     ogImage: '/meta/projects.png',
     twitterCard: 'summary_large_image',
   },
+
+  // Books page
+  '/books': {
+    title: 'Books - Reading List',
+    description:
+      'Books I am reading, with one-line takeaways. Placeholder entries to be filled with real titles.',
+    keywords: ['books', 'reading list', 'takeaways'],
+    ogImage: '/meta/blogs.png',
+    twitterCard: 'summary_large_image',
+  },
 };
 
 // Helper function to get metadata for a specific page
