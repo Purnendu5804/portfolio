@@ -9,7 +9,7 @@ import './App.css';
 // Lazy-loaded pages
 const Home = lazy(() => import('./pages/home/Home'));
 const ProjectsLayout = lazy(() => import('./pages/ProjectsLayout'));
-const UsesLayout = lazy(() => import('./pages/uses/UsesLayout'));
+const LearningLayout = lazy(() => import('./pages/learning/LearningLayout'));
 const ResumeLayout = lazy(() => import('./pages/resume/ResumeLayout'));
 const BlogLayout = lazy(() => import('./pages/blogs/BlogLayout'));
 const HowToPlanAProject = lazy(() => import('./pages/blogs/HowToPlanAProject'));
@@ -27,7 +27,8 @@ export const App: React.FC = () => {
                 <Route path="/" element={<Home />} />
                 <Route path="/home" element={<Navigate to="/" replace />} />
                 <Route path="/projects" element={<ProjectsLayout />} />
-                <Route path="/uses" element={<UsesLayout />} />
+                <Route path="/learning" element={<LearningLayout />} />
+                <Route path="/uses" element={<Navigate to="/learning" replace />} />
                 <Route path="/resume" element={<ResumeLayout />} />
                 <Route path="/blogs" element={<BlogLayout />} />
                 <Route

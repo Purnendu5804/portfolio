@@ -1,0 +1,122 @@
+.learning-page {
+  width: 100%;
+}
+
+.learning-page-intro {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.learning-stages-container {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.learning-stage-card {
+  background-color: transparent;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  transition: border-color var(--duration-slow);
+}
+
+.learning-stage-card:hover {
+  border-color: var(--border-hover);
+}
+
+.stage-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: 1px dashed #333;
+  padding-bottom: 16px;
+}
+
+.stage-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stage-heading {
+  font-family: var(--font-ui);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.stage-description {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.stage-items-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.stage-item-box {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: all var(--duration-fast);
+}
+
+.stage-item-box:hover {
+  border-color: var(--border-hover);
+  background-color: #232326;
+  transform: translateY(-1px);
+}
+
+.stage-item-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.stage-item-name {
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.stage-item-category {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-tertiary);
+  flex-shrink: 0;
+}
+
+.stage-item-notes {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.55;
+  margin: 0;
+}
+
+@media (max-width: 580px) {
+  .stage-item-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}

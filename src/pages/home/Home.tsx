@@ -3,7 +3,7 @@ import HeroSection from '../../components/heroSection/HeroSection';
 import SkillSection from '../../components/skillSection/SkillSection';
 import Experience from '../../components/experience/Experience';
 import Projects from '../../components/projects/Projects';
-import UsesSection from '../../components/uses/UsesSection';
+import LearningSection from '../../components/learning/LearningSection';
 import ContactMe from '../../components/contactMe/ContactMe';
 
 export const Home: React.FC = () => {
@@ -13,7 +13,7 @@ export const Home: React.FC = () => {
       <SkillSection />
       <Experience />
       <Projects />
-      <UsesSection />
+      <LearningSection />
       <ContactMe />
     </div>
   );
