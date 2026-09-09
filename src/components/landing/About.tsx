@@ -1,10 +1,38 @@
-import { about, mySkills } from '@/config/About';
+import { type MarqueeSkill, about, marqueeSkills } from '@/config/About';
+import { cn } from '@/lib/utils';
 import Image from 'next/image';
 import React from 'react';
 
 import Container from '../common/Container';
 import SectionHeading from '../common/SectionHeading';
 import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
+
+function SkillPill({ skill }: { skill: MarqueeSkill }) {
+  return (
+    <Tooltip delayDuration={0}>
+      <TooltipTrigger asChild>
+        <div className="bg-card flex shrink-0 items-center gap-3 rounded-full border px-4 py-2 shadow-sm transition-transform duration-300 hover:scale-105">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src={skill.iconUrl}
+            alt={`${skill.name} logo`}
+            loading="lazy"
+            className={cn(
+              'size-8 object-contain',
+              skill.invertOnDark && 'dark:invert',
+            )}
+          />
+          <span className="text-sm font-medium whitespace-nowrap">
+            {skill.name}
+          </span>
+        </div>
+      </TooltipTrigger>
+      <TooltipContent>
+        <p>{skill.name}</p>
+      </TooltipContent>
+    </Tooltip>
+  );
+}
 
 export default function About() {
   return (
@@ -23,19 +51,25 @@ export default function About() {
           <h3 className="text-2xl font-bold">{about.name}</h3>
           <p className="text-secondary mt-4">{about.description}</p>
           <p className="text-secondary mt-2 text-sm">{about.personal}</p>
-          <p className="text-secondary mt-8 font-bold">Skills</p>
-          <div className="flex flex-wrap gap-2">
-            {mySkills.map((skill) => (
-              <Tooltip key={skill.key}>
-                <TooltipTrigger asChild>
-                  <div className="mt-4 size-6 hover:cursor-pointer">
-                    {skill}
-                  </div>
-                </TooltipTrigger>
-                <TooltipContent>{skill.key}</TooltipContent>
-              </Tooltip>
-            ))}
-          </div>
+        </div>
+      </div>
+
+      {/* Skills marquee */}
+      <p className="text-secondary mt-10 font-bold">Skills</p>
+      <div className="skills-marquee skills-marquee-mask mt-4 overflow-hidden">
+        <div className="skills-marquee-track flex w-max gap-4 pr-4">
+          {marqueeSkills.map((skill) => (
+            <SkillPill key={skill.name} skill={skill} />
+          ))}
+          {marqueeSkills.map((skill) => (
+            <span
+              key={`dup-${skill.name}`}
+              aria-hidden="true"
+              className="contents"
+            >
+              <SkillPill skill={skill} />
+            </span>
+          ))}
         </div>
       </div>
     </Container>

@@ -240,6 +240,41 @@
     inset 0 2px 6px rgba(255, 255, 255, 0.04);
 }
 
+/* Skills marquee — horizontal auto-scroll, pauses on hover */
+@keyframes skills-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.skills-marquee-track {
+  animation: skills-scroll 32s linear infinite;
+}
+
+.skills-marquee:hover .skills-marquee-track {
+  animation-play-state: paused;
+}
+
+.skills-marquee-mask {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 8%,
+    black 92%,
+    transparent
+  );
+}
+
 /* Blog font size controls */
 .prose {
   font-size: var(--blog-font-size);
