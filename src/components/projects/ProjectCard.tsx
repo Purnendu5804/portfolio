@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { HiOutlineExternalLink } from 'react-icons/hi';
 import { LuConstruction } from 'react-icons/lu';
@@ -28,10 +28,27 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
   isPrivate,
   stats,
 }) => {
+  const [imgSrc, setImgSrc] = useState(banner);
+
+  useEffect(() => {
+    setImgSrc(banner);
+  }, [banner]);
+
   return (
     <div className="project-card">
       <div className="project-banner-box">
-        <img src={banner} alt={name} className="project-banner-img" />
+        <img
+          src={imgSrc}
+          alt={name}
+          className="project-banner-img"
+          onError={() => {
+            if (imgSrc.endsWith('.svg')) {
+              setImgSrc(imgSrc.replace('.svg', '.png'));
+            } else if (imgSrc.endsWith('.png')) {
+              setImgSrc(imgSrc.replace('.png', '.svg'));
+            }
+          }}
+        />
         {stats && <span className="project-badge-stats">{stats}</span>}
         {isUnderDevelopment && (
           <span className="project-badge-dev">

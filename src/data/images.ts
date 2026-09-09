@@ -4,11 +4,11 @@ export const userImages = {
     qrCode: '/images/profile/qr-code.png',
   },
   projects: {
-    project1: '/images/projects/sdchouse.svg',
+    project1: '/images/projects/sdchouse.png',
     project2: '/images/projects/rce_engine.svg',
-    project3: '/images/projects/riyal_auction.svg',
+    project3: '/images/projects/riyal_auction.png',
     project4: '/images/misc/fossee.svg',
-    project5: '/images/projects/sdchouse.svg',
+    project5: '/images/projects/sdchouse.png',
     project6: '/images/projects/rce_engine.svg',
   },
   decorations: {
