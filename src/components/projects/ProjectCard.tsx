@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { HiOutlineExternalLink, HiArrowRight } from 'react-icons/hi';
+import { LuConstruction } from 'react-icons/lu';
 import './Projects.css';
 
 export interface ProjectCardProps {
@@ -50,7 +51,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
             }
           }}
         />
-        {stats && <span className="project-badge-stats">{stats}</span>}
+        {stats && (
+          <span className="project-badge-stats">
+            {(isUnderDevelopment || stats.toLowerCase().includes('sandbox')) && (
+              <LuConstruction className="project-badge-board-icon" />
+            )}
+            <span>{stats}</span>
+          </span>
+        )}
       </div>
 
       <div className="project-content">

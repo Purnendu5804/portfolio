@@ -30,7 +30,7 @@ export const featuredProjects: ProjectData[] = [
     tech: ['TypeScript', 'Express', 'BullMQ', 'Redis', 'Docker', 'Prisma', 'PostgreSQL'],
     github: 'https://github.com/Purnendu5804',
     isUnderDevelopment: true,
-    stats: 'Sandboxed Engine',
+    stats: 'Sandboxing',
   },
   {
     name: 'riyal_auction',

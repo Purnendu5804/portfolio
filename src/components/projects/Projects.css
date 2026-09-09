@@ -82,6 +82,15 @@
   color: var(--accent-amber);
   letter-spacing: 0.3px;
   z-index: 2;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.project-badge-board-icon {
+  font-size: 0.9rem;
+  color: var(--accent-yellow, #fbbf24);
+  flex-shrink: 0;
 }
 
 .project-content {

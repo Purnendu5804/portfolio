@@ -1,11 +1,8 @@
 import React from 'react';
 import { FaHeart } from 'react-icons/fa';
-import { useVisitorCounter } from '../../hooks/useVisitorCounter';
 import './Footer.css';
 
 export const Footer: React.FC = () => {
-  const { visitorCount, loading } = useVisitorCounter();
-
   return (
     <footer className="footer-wrapper">
       <div className="footer-container">
@@ -22,17 +19,9 @@ export const Footer: React.FC = () => {
             <span>by Purnendu</span>
           </div>
 
-          <div className="footer-visitor-box">
-            <span className="visitor-indicator" />
-            <span className="visitor-label">Visitors:</span>
-            <span className="visitor-number">
-              {loading ? '...' : visitorCount?.toLocaleString() || '1,249'}
-            </span>
+          <div className="footer-copyright">
+            &copy; {new Date().getFullYear()} Purnendu. All rights reserved.
           </div>
-        </div>
-
-        <div className="footer-copyright">
-          &copy; {new Date().getFullYear()} Purnendu. All rights reserved.
         </div>
       </div>
     </footer>
