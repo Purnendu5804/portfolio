@@ -9,7 +9,7 @@ interface BlogAuthorProps {
 }
 
 export const BlogAuthor: React.FC<BlogAuthorProps> = ({
-  name = 'Purnendu Tiwari',
+  name = 'Purnendu',
   avatar = userImages.profile.avatar,
   children,
 }) => {

@@ -77,7 +77,7 @@ docker run --rm \\
           ]}
         />
 
-        <BlogAuthor name="Purnendu Tiwari">
+        <BlogAuthor name="Purnendu">
           CS student, AWS Certified Solutions Architect, and Software Development Intern at FOSSEE, IIT Bombay.
         </BlogAuthor>
       </BlogLayoutContainer>

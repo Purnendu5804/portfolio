@@ -18,7 +18,7 @@ export const ResumeLayout: React.FC = () => {
         <div className="resume-actions">
           <a
             href="/resume/resume.pdf"
-            download="Purnendu_Tiwari_Resume.pdf"
+            download="Purnendu_Resume.pdf"
             className="resume-btn"
           >
             <HiOutlineDownload /> Download PDF
@@ -37,7 +37,7 @@ export const ResumeLayout: React.FC = () => {
       <div className="resume-viewer-card">
         <iframe
           src="/resume/resume.pdf"
-          title="Purnendu Tiwari Resume"
+          title="Purnendu Resume"
           className="resume-iframe"
         />
       </div>

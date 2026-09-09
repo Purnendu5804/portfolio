@@ -15,7 +15,7 @@ export const HeroSection: React.FC = () => {
           <div className="hero-avatar-container">
             <img
               src={userImages.profile.avatar}
-              alt="Purnendu Tiwari"
+              alt="Purnendu"
               className="hero-avatar"
             />
             <button
@@ -34,7 +34,7 @@ export const HeroSection: React.FC = () => {
               <span>AWS Certified Solutions Architect</span>
             </div>
 
-            <h1 className="hero-name">Purnendu Tiwari</h1>
+            <h1 className="hero-name">Purnendu</h1>
             <a
               href="https://x.com/purnendu_5804"
               target="_blank"
