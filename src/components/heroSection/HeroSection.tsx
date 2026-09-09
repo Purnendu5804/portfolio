@@ -1,39 +1,12 @@
 import React, { useState } from 'react';
 import { FaTwitter, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import { HiOutlineLocationMarker, HiOutlineQrcode, HiCheck } from 'react-icons/hi';
+import { SiLeetcode } from 'react-icons/si';
+import { HiOutlineLocationMarker, HiOutlineQrcode, HiDocumentDownload } from 'react-icons/hi';
 import { userImages } from '../../data/images';
 import './HeroSection.css';
 
 export const HeroSection: React.FC = () => {
   const [showQR, setShowQR] = useState(false);
-  const [copiedEmail, setCopiedEmail] = useState(false);
-
-  const handleGetInTouch = () => {
-    // 1. Copy email address to clipboard
-    const email = 'purnendutiwari2004@gmail.com';
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(email).catch(() => {});
-    } else {
-      const textArea = document.createElement('textarea');
-      textArea.value = email;
-      document.body.appendChild(textArea);
-      textArea.select();
-      try {
-        document.execCommand('copy');
-      } catch {
-        // ignore
-      }
-      document.body.removeChild(textArea);
-    }
-    setCopiedEmail(true);
-    setTimeout(() => setCopiedEmail(false), 3000);
-
-    // 2. Smoothly scroll to the Contact / Connect section
-    const contactSection = document.getElementById('contact');
-    if (contactSection) {
-      contactSection.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
 
   return (
     <section className="hero-section">
@@ -116,21 +89,11 @@ export const HeroSection: React.FC = () => {
         {/* Action Buttons & Social Links */}
         <div className="hero-actions-row">
           <a
-            href="mailto:purnendutiwari2004@gmail.com"
-            onClick={handleGetInTouch}
+            href="/resume"
             className="hero-primary-btn"
           >
-            {copiedEmail ? (
-              <>
-                <HiCheck className="hero-btn-icon" style={{ color: 'var(--status-active)' }} />
-                <span>Email Copied!</span>
-              </>
-            ) : (
-              <>
-                <FaEnvelope className="hero-btn-icon" />
-                <span>Get in Touch</span>
-              </>
-            )}
+            <HiDocumentDownload className="hero-btn-icon" />
+            <span>Resume</span>
           </a>
 
           <div className="hero-socials">
@@ -160,6 +123,22 @@ export const HeroSection: React.FC = () => {
               title="Twitter / X"
             >
               <FaTwitter />
+            </a>
+            <a
+              href="https://leetcode.com/u/purnendutiwari2004/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hero-social-btn"
+              title="LeetCode"
+            >
+              <SiLeetcode />
+            </a>
+            <a
+              href="mailto:purnendutiwari2004@gmail.com"
+              className="hero-social-btn"
+              title="Email"
+            >
+              <FaEnvelope />
             </a>
           </div>
         </div>

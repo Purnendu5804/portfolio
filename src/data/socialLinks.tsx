@@ -1,5 +1,6 @@
 import { ReactNode } from 'react';
 import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from 'react-icons/fa';
+import { SiLeetcode } from 'react-icons/si';
 import { HiDocumentDownload } from 'react-icons/hi';
 
 export interface SocialLink {
@@ -15,6 +16,12 @@ export const socialLinks: SocialLink[] = [
     url: 'https://github.com/Purnendu5804',
     icon: <FaGithub />,
     color: '#ffffff',
+  },
+  {
+    name: 'LeetCode',
+    url: 'https://leetcode.com/u/purnendutiwari2004/',
+    icon: <SiLeetcode />,
+    color: '#ffa116',
   },
   {
     name: 'LinkedIn',
