@@ -7,8 +7,9 @@
 
 export const ctaConfig = {
   // Profile image settings
-  profileImage: '/assets/logo.png',
-  profileAlt: 'Profile',
+  // TODO: Replace with Purnendu's actual profile photo once provided.
+  profileImage: '/profile/purnendu-placeholder.svg',
+  profileAlt: 'Purnendu',
 
   // CTA button settings
   linkText: 'Book a Free Call',

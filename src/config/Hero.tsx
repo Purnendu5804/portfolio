@@ -46,7 +46,8 @@ export const heroConfig = {
   name: 'Purnendu',
   title:
     'CS student learning DevOps & Cloud infrastructure, building toward AI-integrated systems.',
-  avatar: '/assets/logo.png',
+  // TODO: Replace with Purnendu's actual profile photo once provided.
+  avatar: '/profile/purnendu-placeholder.svg',
 
   // Skills Configuration
   skills: [

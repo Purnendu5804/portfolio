@@ -27,10 +27,9 @@ export const experiences: Experience[] = [
     company: 'FOSSEE, IIT Bombay',
     position: 'Software Development Intern',
     location: 'Mumbai, India',
-    image: '/assets/logo.png',
-    description: [
-      'Worked on Linux packaging for the eSim EDA tool.',
-    ],
+    // Neutral placeholder — use the FOSSEE/IIT Bombay logo if available.
+    image: '/company/fossee-placeholder.svg',
+    description: ['Worked on Linux packaging for the eSim EDA tool.'],
     startDate: 'May 2026',
     endDate: 'July 2026',
     technologies: [],

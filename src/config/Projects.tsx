@@ -9,9 +9,9 @@ import { Project } from '@/types/project';
 export const projects: Project[] = [
   {
     title: 'RCE Engine',
-    description:
-      'A Judge0-style sandboxed remote code execution engine.',
-    image: '/assets/logo.png',
+    description: 'A Judge0-style sandboxed remote code execution engine.',
+    // TODO: Replace with a real screenshot of the project once available.
+    image: '/project/rce-engine-placeholder.svg',
     link: '#',
     technologies: [
       { name: 'TypeScript', icon: <TypeScript key="typescript" /> },
