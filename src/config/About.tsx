@@ -49,5 +49,5 @@ export const marqueeSkills: MarqueeSkill[] = [
 export const about = {
   name: 'Purnendu',
   description: `CS student learning DevOps & Cloud infrastructure, building toward AI-integrated systems.`,
-  personal: `Outside tech, I enjoy playing guitar / music.`,
+  personal: `Outside tech, I enjoy reading books and playing guitar / music.`,
 };

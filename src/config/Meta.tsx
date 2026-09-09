@@ -19,10 +19,9 @@ export const siteConfig = {
   ogImage: '/meta/opengraph-image.png',
   author: {
     name: about.name,
-    // TODO: Add real X handle once provided.
-    twitter: '',
+    twitter: '@purnendu_5804',
     github: 'Purnendu5804',
-    linkedin: 'purnendutiwari',
+    linkedin: 'purnendu-tiwari-506622202',
     email: 'purnendutiwari2004@gmail.com',
   },
   keywords: [

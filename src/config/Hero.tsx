@@ -96,17 +96,16 @@ export const heroConfig = {
 };
 
 // Social Links Configuration
-// GitHub is Purnendu's real account. X / LinkedIn / Email are placeholders
-// until real links are provided — do not point them at the template author.
+// All links below are Purnendu's own profiles.
 export const socialLinks = [
   {
-    name: 'X (Add link)',
-    href: '#',
+    name: 'X',
+    href: 'https://x.com/purnendu_5804',
     icon: <X />,
   },
   {
     name: 'LinkedIn',
-    href: 'https://www.linkedin.com/in/purnendutiwari',
+    href: 'https://www.linkedin.com/in/purnendu-tiwari-506622202/',
     icon: <LinkedIn />,
   },
   {

@@ -17,9 +17,9 @@ export const projects: Project[] = [
   {
     title: 'RCE Engine',
     description: 'A Judge0-style sandboxed remote code execution engine.',
-    // TODO: Replace with a real screenshot of the project once available.
+    // TODO: Add public GitHub / live URL once available.
     image: '/project/rce-engine-placeholder.svg',
-    link: '#',
+    link: '/projects/rce-engine',
     technologies: [
       { name: 'TypeScript', icon: <TypeScript key="typescript" /> },
       { name: 'Express', icon: <ExpressJs key="expressjs" /> },
@@ -29,8 +29,8 @@ export const projects: Project[] = [
       { name: 'Prisma', icon: <Prisma key="prisma" /> },
       { name: 'PostgreSQL', icon: <PostgreSQL key="postgresql" /> },
     ],
-    // TODO: Add GitHub / live URL once available.
-    live: '#',
+    // No public live URL yet — empty until one exists (never a '#' dead link).
+    live: '',
     details: true,
     projectDetailsPageSlug: '/projects/rce-engine',
     isWorking: false, // Actively building — DevOps layer in progress
