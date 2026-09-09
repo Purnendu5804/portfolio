@@ -1,0 +1,217 @@
+.experience-section {
+  width: 100%;
+}
+
+.experience-timeline-container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-left: 12px;
+  border-left: 1px dashed var(--text-faintest, #555);
+  padding-left: 20px;
+  gap: 24px;
+}
+
+.experience-card-item {
+  position: relative;
+  width: 100%;
+}
+
+.timeline-dot-wrapper {
+  position: absolute;
+  left: -26px;
+  top: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.timeline-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: 2px solid var(--bg-primary);
+}
+
+.dot-present {
+  background-color: var(--status-active);
+  box-shadow: 0 0 8px var(--status-active);
+  animation: pulse-dot 1.2s infinite;
+}
+
+.dot-past {
+  background-color: var(--status-past);
+  box-shadow: 0 0 6px rgba(255, 51, 51, 0.4);
+}
+
+.dot-future {
+  background-color: var(--status-future);
+  box-shadow: 0 0 6px rgba(255, 170, 0, 0.4);
+}
+
+.experience-card-body {
+  background-color: transparent;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  transition: border-color var(--duration-slow);
+}
+
+.experience-card-body:hover {
+  border-color: var(--border-hover);
+}
+
+.experience-card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.experience-logo-box {
+  width: 44px;
+  height: 44px;
+  background-color: var(--bg-surface-subtle);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+  padding: 6px;
+}
+
+.experience-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.experience-logo-fallback {
+  font-family: var(--font-ui);
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+}
+
+.experience-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.experience-role-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.experience-role {
+  font-family: var(--font-ui);
+  font-size: 0.98rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.experience-status-badge {
+  font-family: var(--font-ui);
+  font-size: 0.65rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+}
+
+.badge-present {
+  background-color: #091d11;
+  color: var(--status-active);
+  border: 1px solid rgba(2, 255, 103, 0.3);
+}
+
+.badge-past {
+  background-color: #1d0909;
+  color: var(--status-past);
+  border: 1px solid rgba(255, 51, 51, 0.3);
+}
+
+.badge-future {
+  background-color: #1d1509;
+  color: var(--status-future);
+  border: 1px solid rgba(255, 170, 0, 0.3);
+}
+
+.experience-company-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.experience-company {
+  font-weight: 500;
+}
+
+.experience-company-link {
+  display: inline-flex;
+  align-items: center;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  transition: color var(--duration-fast);
+}
+
+.experience-company-link:hover {
+  color: var(--text-primary);
+}
+
+.experience-location {
+  color: var(--text-dim);
+  font-size: 0.8rem;
+}
+
+.experience-dates {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--text-tertiary);
+}
+
+.experience-toggle-btn {
+  color: var(--text-dim);
+  font-size: 1.2rem;
+  padding: 4px;
+  transition: transform var(--duration-fast);
+}
+
+.toggle-open {
+  transform: rotate(180deg);
+}
+
+.experience-bullets {
+  list-style-type: disc;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin: 0;
+  border-top: 1px dashed #333;
+  padding-top: 12px;
+}
+
+.experience-bullets li {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  line-height: 1.55;
+}
+
+.experience-calendar-wrapper {
+  margin-top: 30px;
+}

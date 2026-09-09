@@ -1,0 +1,33 @@
+.blog-article-container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.blog-back-wrapper {
+  margin-bottom: 12px;
+}
+
+.blog-back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  transition: color var(--duration-fast);
+}
+
+.blog-back-link:hover {
+  color: var(--text-primary);
+}
+
+.blog-body-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  line-height: 1.7;
+}

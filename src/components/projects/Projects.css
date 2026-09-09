@@ -1,0 +1,200 @@
+.projects-section,
+.all-projects-container {
+  width: 100%;
+}
+
+.back-link-wrapper {
+  margin-bottom: 20px;
+}
+
+.back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  transition: color var(--duration-fast);
+}
+
+.back-link:hover {
+  color: var(--text-primary);
+}
+
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.project-card {
+  background-color: transparent;
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: border-color var(--duration-slow);
+}
+
+.project-card:hover {
+  border-color: var(--border-hover);
+}
+
+.project-banner-box {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  background-color: var(--bg-skeleton);
+  overflow: hidden;
+  border-bottom: 1px solid var(--border-default);
+}
+
+.project-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slow);
+}
+
+.project-card:hover .project-banner-img {
+  transform: scale(1.02);
+}
+
+.project-badge-stats {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: linear-gradient(135deg, var(--bg-surface) 0%, #0d0d0d 100%);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  padding: 3px 8px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--accent-amber);
+  letter-spacing: 0.3px;
+}
+
+.project-badge-dev {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: rgba(251, 191, 36, 0.15);
+  border: 1px solid var(--accent-yellow);
+  color: var(--accent-yellow);
+  border-radius: var(--radius-sm);
+  padding: 3px 8px;
+  font-family: var(--font-ui);
+  font-size: 0.72rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.project-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.project-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-title {
+  font-family: var(--font-ui);
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.project-links-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.project-action-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  transition: all var(--duration-fast);
+}
+
+.project-action-link:hover {
+  border-color: var(--border-hover);
+  color: var(--text-primary);
+  background-color: #232326;
+  transform: translateY(-1px);
+}
+
+.project-desc {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.project-tech-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.tech-pill {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 3px 8px;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+}
+
+.projects-more-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 24px;
+}
+
+.projects-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-sm);
+  padding: 8px 18px;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: all var(--duration-fast);
+}
+
+.projects-more-btn:hover {
+  border-color: var(--border-hover);
+  background-color: #232326;
+}
+
+.more-arrow-icon {
+  font-size: 1rem;
+  transition: transform var(--duration-slow);
+}
+
+.projects-more-btn:hover .more-arrow-icon {
+  transform: translateX(4px);
+}
