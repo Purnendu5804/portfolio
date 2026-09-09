@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaGithub } from 'react-icons/fa';
-import { HiOutlineExternalLink } from 'react-icons/hi';
-import { LuConstruction } from 'react-icons/lu';
+import { HiOutlineExternalLink, HiArrowRight } from 'react-icons/hi';
 import './Projects.css';
 
 export interface ProjectCardProps {
@@ -34,6 +33,8 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
     setImgSrc(banner);
   }, [banner]);
 
+  const targetLink = live || (!isPrivate ? github : undefined);
+
   return (
     <div className="project-card">
       <div className="project-banner-box">
@@ -50,11 +51,6 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           }}
         />
         {stats && <span className="project-badge-stats">{stats}</span>}
-        {isUnderDevelopment && (
-          <span className="project-badge-dev">
-            <LuConstruction /> Under Development
-          </span>
-        )}
       </div>
 
       <div className="project-content">
@@ -67,7 +63,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 className="project-action-link"
-                title="GitHub Repository"
+                title="View GitHub"
               >
                 <FaGithub />
               </a>
@@ -78,7 +74,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
                 target="_blank"
                 rel="noopener noreferrer"
                 className="project-action-link"
-                title="Live Demo"
+                title="Visit Website"
               >
                 <HiOutlineExternalLink />
               </a>
@@ -94,6 +90,37 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
               {item}
             </span>
           ))}
+        </div>
+
+        <div className="project-footer-row">
+          <div
+            className={`project-status-pill ${
+              isUnderDevelopment ? 'status-dev' : 'status-live'
+            }`}
+          >
+            <span
+              className={`project-pulse-dot ${
+                isUnderDevelopment ? 'dot-dev' : 'dot-live'
+              }`}
+            />
+            <span>
+              {isUnderDevelopment
+                ? 'Under Active Development'
+                : 'All Systems Operational'}
+            </span>
+          </div>
+
+          {targetLink && (
+            <a
+              href={targetLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="project-details-link"
+            >
+              <span>{live ? 'Visit Live App' : 'View Code'}</span>
+              <HiArrowRight className="details-arrow-icon" />
+            </a>
+          )}
         </div>
       </div>
     </div>
