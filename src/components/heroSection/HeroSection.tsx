@@ -82,7 +82,7 @@ export const HeroSection: React.FC = () => {
             <strong>Software Development Intern</strong> at <strong>FOSSEE, IIT Bombay</strong>; modernized Linux packaging pipelines for AppImage and Flatpak.
           </li>
           <li>
-            <strong>LeetCode Knight</strong> (Contest Rating: 1852, top 5%), President of Software Development Club, and classical music practitioner.
+            <strong>LeetCode Knight</strong> (Contest Rating: 1852, top 5%), classical music practitioner.
           </li>
         </ul>
 
