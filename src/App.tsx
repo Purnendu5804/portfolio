@@ -31,6 +31,7 @@ export const App: React.FC = () => {
                 <Route path="/resume" element={<ResumeLayout />} />
                 <Route path="/books" element={<BooksLayout />} />
                 <Route path="/blogs" element={<Navigate to="/books" replace />} />
+                <Route path="/contact" element={<Navigate to="/#contact" replace />} />
                 <Route path="*" element={<PageNotFound />} />
               </Routes>
             </Suspense>

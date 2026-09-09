@@ -1,11 +1,39 @@
 import React, { useState } from 'react';
 import { FaTwitter, FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
-import { HiOutlineLocationMarker, HiOutlineQrcode } from 'react-icons/hi';
+import { HiOutlineLocationMarker, HiOutlineQrcode, HiCheck } from 'react-icons/hi';
 import { userImages } from '../../data/images';
 import './HeroSection.css';
 
 export const HeroSection: React.FC = () => {
   const [showQR, setShowQR] = useState(false);
+  const [copiedEmail, setCopiedEmail] = useState(false);
+
+  const handleGetInTouch = () => {
+    // 1. Copy email address to clipboard
+    const email = 'purnendutiwari2004@gmail.com';
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(email).catch(() => {});
+    } else {
+      const textArea = document.createElement('textarea');
+      textArea.value = email;
+      document.body.appendChild(textArea);
+      textArea.select();
+      try {
+        document.execCommand('copy');
+      } catch {
+        // ignore
+      }
+      document.body.removeChild(textArea);
+    }
+    setCopiedEmail(true);
+    setTimeout(() => setCopiedEmail(false), 3000);
+
+    // 2. Smoothly scroll to the Contact / Connect section
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <section className="hero-section">
@@ -89,10 +117,20 @@ export const HeroSection: React.FC = () => {
         <div className="hero-actions-row">
           <a
             href="mailto:purnendutiwari2004@gmail.com"
+            onClick={handleGetInTouch}
             className="hero-primary-btn"
           >
-            <FaEnvelope className="hero-btn-icon" />
-            <span>Get in Touch</span>
+            {copiedEmail ? (
+              <>
+                <HiCheck className="hero-btn-icon" style={{ color: 'var(--status-active)' }} />
+                <span>Email Copied!</span>
+              </>
+            ) : (
+              <>
+                <FaEnvelope className="hero-btn-icon" />
+                <span>Get in Touch</span>
+              </>
+            )}
           </a>
 
           <div className="hero-socials">
@@ -106,7 +144,7 @@ export const HeroSection: React.FC = () => {
               <FaGithub />
             </a>
             <a
-              href="https://linkedin.com/in/purnendutiwari"
+              href="https://www.linkedin.com/in/purnendu-tiwari-506622202/"
               target="_blank"
               rel="noopener noreferrer"
               className="hero-social-btn"
